@@ -43,6 +43,7 @@
     "extends": "universe/native",
     "root": true
   },
-  "main": "node_modules/expo/AppEntry.js",
+  "scheme": "argo_mobile",
+  "main": "expo-router/entry",
   "private": true
 }
