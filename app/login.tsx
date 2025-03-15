@@ -1,17 +1,18 @@
+import LoginForm from 'components/LoginForm';
 import { useRouter } from 'expo-router'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native'
 
 const login = () => {
 
     const router = useRouter();
 
     return (
-        <View className='flex flex-1 justify-center items-center'>
-            <Text className='text-3xl'>Login</Text>
-            <TouchableOpacity onPress={() => router.replace("/")}>
-                <Text>HOME</Text>
-            </TouchableOpacity>
-        </View>
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+            <View className='flex flex-1 justify-center items-center p-4'>
+                <Text className='text-3xl'>Login</Text>
+                <LoginForm />
+            </View>
+        </TouchableWithoutFeedback>
     )
 }
 
